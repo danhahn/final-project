@@ -18,6 +18,28 @@ You will have two full classes to complete the final project plus the time betwe
 
 This file is the source of truth for all content.  Any PSD or JPG is only there to provide a visual guide on how things should look.  Your project may not match the designs exactly.  
 
+### Colors
+
+<table>
+	<tr>
+		<td style="background-color:#ffffff;width:100px;height:20px;text-align:center;">#ffffff</td>
+		<td style="background-color:#c0c0c0;width:100px;height:20px;text-align:center;">#c0c0c0</td>
+		<td style="background-color:#808080;color:white;width:100px;height:20px;text-align:center;">#808080</td>
+		<td style="background-color:#333333;color:white;width:100px;height:20px;text-align:center;">#333333</td>
+		<td style="background-color:#000000;color:white;width:100px;height:20px;text-align:center;">#000000</td>
+	</tr>
+	<tr>
+		<td style="background-color:#004358;color:white;width:100px;height:20px;text-align:center;">#004358</td>
+		<td style="background-color:#181e47;color:white;width:100px;height:20px;text-align:center;">#181e47</td>
+		<td style="background-color:#ffe11a;width:100px;height:20px;text-align:center;">#ffe11a</td>
+		<td style="background-color:#ff951a;width:100px;height:20px;text-align:center;">#ff951a</td>
+		<td style="background-color:#7fcaf5;width:100px;height:20px;text-align:center;">#7fcaf5</td>
+	</tr>
+	<tr>
+		<td style="background-color:#50b7f1;width:100px;height:20px;text-align:center;">#50b7f1</td>
+	</tr>
+</table>
+
 ### Final thought
 
 Do your best.  Have fun.  Try not to stress to much and let me know if you have any questions.
@@ -184,6 +206,8 @@ The following are the ten largest metropolitan areas in the state:
 Downstate New York (New York City, Long Island, and the southern portion of the Hudson Valley) can be considered to form the central core of the Northeast megalopolis, an urbanized region stretching from New Hampshire to Virginia.
 
 The major cities of the state developed along the key transportation and trade routes of the early 19th century, including the Erie Canal and railroads paralleling it. Today, the New York Thruway acts as a modern counterpart to commercial water routes.
+
+<div style="page-break-before:always">&nbsp;</div>
 
 ---
 

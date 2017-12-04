@@ -32,71 +32,69 @@ a {
 }
 
 .container {
-	width: @total;
-	margin: 10px auto;
+	max-width: @total;
+	margin: 1em auto;
 	box-shadow: 0 1px 10px rgba(0, 0, 0, .5);
+	@media screen and (max-width: 1000px) {
+		margin: 0;
+		display: flex;
+		flex-direction: column;
+	}
 }
 
 .global-header {
-	padding: 20px;
+	padding: 1em;
 	background-color: @color0;
 	background: url(../images/header.png) center ;
+	@media screen and (max-width: 414px) {
+		order: 1;
+		border: solid @color1;
+		border-width: 3px;
+	}
 	h1 {
 		font-family: 'Montserrat', sans-serif;
 		font-size: 60px;
+		@media screen and (max-width: 414px) {
+			font-size: 3em;
+			text-align: center;
+			line-height: 1em;
+			text-shadow: 0 1px 2px rgba(0,0,0,.5);
+		}
 		color: @color1;
 		letter-spacing: -1px;
 	}
 	.tagline {
 		font-size: 20px;
+		@media screen and (max-width: 414px) {
+			font-size: 1.3em;
+			text-align: center;
+			line-height: 1em;
+		}
 		font-family: 'Homemade Apple', cursive;
 		color: white;
-	}
-	form {
-		background-color: @color2;
-		float: right;
-		padding: 5px;
-		margin: 5px;
-		border-bottom: 2px #c0c0c0;
-		border-left: 2px #c0c0c0;
-		border-radius: 10px;
-		input {
-			width: 120px;
-			border: 2px solid #c0c0c0;
-			padding: 5px;
-			border-radius: 5px
-		}
-		button {
-			background: @color1;
-			color: #ffffff;
-			padding: 6px 15px;
-			text-transform: uppercase;
-			font-weight: bold;
-			border: none;
-			border-radius: 5px;
-		}
 	}
 }
 
 .global-nav {
 	background: @color1;
-	&:after {
-		content: "";
-		display: block;
-		clear: both;
+	@media screen and (max-width: 414px) {
+		order: 3;
 	}
 	ul {
 		margin: 0;
 		padding: 0;
 		list-style: none;
-	}
-	li {
-		float: left;
+		display: flex;
+		@media screen and (max-width: 414px) {
+			flex-direction: column;
+		}
 	}
 	a {
-		font-size: 15px;
 		display: block;
-		padding: 10px 20px;
+		padding: 1em;
+		@media screen and (max-width: 414px) {
+			padding: .5em;
+		}
 		color: black;
 		text-decoration: none;
 		&:hover, &.active {
@@ -106,35 +104,39 @@ a {
 }
 
 .content-area {
-	&:after {
-		content: "";
-		display: block;
-		clear: both;
+	display: flex;
+	@media screen and (max-width: 414px) {
+		order: 2;
+		flex-direction: column;
 	}
-	background: @color2;
-}
-
-.main-content, .secondary-contnet {
-	float: left;
 }
 
 .main-content {
 	box-sizing: border-box;
-	width: @main;
-	padding: 20px;
+	flex: 1;
+	padding: 2em;
+	@media screen and (max-width: 414px) {
+		padding: 1em;
+	}
 	background: url(../images/ny-seal.png) no-repeat center 200px #ffffff;
 
 	h2 {
-		font-size: 45px;
+		font-family: 'Montserrat', sans-serif;
+		font-size: 3em;
+		@media screen and (max-width: 414px) {
+			font-size: 2em;
+		}
 		color: @color0;
 	}
 
 	h3 {
+		font-family: 'Montserrat', sans-serif;
 		color: @color2;
-		font-size: 20px;
+		font-size: 2em;
 		border-bottom: 1px solid @gray;
 		padding-bottom: 5px;
-		margin: 30px 0 10px;
+		margin: 1em 0 .5em;
+		letter-spacing: -1px;
 	}
 
 	p {
@@ -143,10 +145,9 @@ a {
 	}
 
 	ul {
-		margin: 10px 0;
-		padding-left: 15px;
+		margin: 1em 0;
+		padding-left: 20px;
 		li {
-			margin: 5px 0;
 			line-height: 1.5em;
 		}
 	}
@@ -157,7 +158,7 @@ table {
 	border: 1px solid @gray;
 	width: 100%;
 	th, td {
-		padding: 5px 10px;
+		padding: .5em 1em;
 		border: 1px solid @gray;
 	}
 	th {
@@ -165,17 +166,21 @@ table {
 		text-align: left;
 		color: white;
 	}
-	td {
-
-	}
 }
 
 .photo-right {
 	float: right;
-	margin-left: 10px;
+	margin-left: 1em;
 	background-color: #ffffff;
 	border: 1px solid @gray;
-	padding: 10px;
+	padding: .5em;
+	@media screen and (max-width: 414px) {
+		float: none;
+		margin: 0;
+		img {
+			width: 100%;
+		}
+	}
 	p {
 		margin: 0;
 		text-align: center;
@@ -184,10 +189,17 @@ table {
 
 .photo-left {
 	float: left;
-	margin-right: 10px;
+	margin-right: 1em;
 	border: 1px solid @gray;
 	background-color: #ffffff;
-	padding: 10px;
+	padding: .5em;
+	@media screen and (max-width: 414px) {
+		float: none;
+		margin: 0;
+		img {
+			width: 100%;
+		}
+	}
 	p {
 		margin: 0;
 		text-align: center;
@@ -195,26 +207,36 @@ table {
 }
 
 .secondary-contnet {
-	width: @side;
+	flex: 0 0 @side;
+	@media screen and (max-width: 414px) {
+		flex: 1;
+	}
+	background: @color2;
 	.info {
 		font-size: 14px;
 		background-color: #ffffff;
-		padding: 20px;
-		margin: 20px;
+		padding: 1em;
+		margin: 1em;
 		border-radius: 10px;
+		@media screen and (max-width: 414px) {
+			border-radius: 0;
+			margin: 0;
+			border-top: 3px solid @color2;
+		}
 		h2 {
-			font-size: 18px;
+			font-size: 1.5em;
+			font-family: 'Montserrat', sans-serif;
 			color: @color0;
 			border-bottom: 1px solid @gray;
 			margin-bottom: 5px;
 			padding-bottom: 2px;
 		}
 		p {
-			margin: 5px 0;
+			margin: 1em 0;
 		}
 		ul {
-			margin: 10px;
-			padding-left: 12px;
+			margin: 1em 0;
+			padding-left: 20px;
 		}
 	}
 }
@@ -222,7 +244,10 @@ table {
 .global-footer {
 	border-top: 2px solid black;
 	background-color: lighten(@color0, 10%);
-	padding: 20px;
+	padding: 1em;
 	text-align: right;
 	color: white;
+	@media screen and (max-width: 414px) {
+		order: 4;
+	}
 }

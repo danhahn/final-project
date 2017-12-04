@@ -1,19 +1,23 @@
 block path
 	if path != '../'
 		-path = ""
+block nav
 
 doctype html
 html
 	head
-		title Spring 2016 HTML -- SVA 		
+		meta(charset='UTF-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0')
+		meta(http-equiv='X-UA-Compatible', content='ie=edge')
+		title=  nav + " - SVA - Fall 2017 HTML"
 		link(rel='stylesheet', href=path+'css/global.css')
 	body
-		.container 		
+		.container
 			nav.global-nav
-				include ../components/nav.jade				
-			header.global-header 					
+				include ../components/nav.jade
+			header.global-header
 				h1 New York State
-				p.tagline The Empire State				
+				p.tagline The Empire State
 			section.content-area
 				article.main-content
 					block content
@@ -21,5 +25,5 @@ html
 					.info
 						block side
 			footer.global-footer
-				p &copy; 2015 SVA HTML
+				p &copy; 2017 SVA HTML
 					a(href="http://www.svahtml.com")
